@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - afza</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <header>
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                        <div class="container">
+                            <a class="navbar-brand" asp-area="" asp-page="/Index">afza</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                                <ul class="navbar-nav flex-grow-1">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                         <a href="#" >TOOTSIE GRAIL</a>
+              <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+            <ul data-aos="fade-left" data-aos-easing="ease-in-out"  data-aos-delay="400" class="nav-ul" id="nav-ul">
+                        </div>
+                    </nav>*@
+        <nav class="navbar navbar-expand-lg navbar-light p-2 fixed-top">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">afza</a>
+
+                <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarRes">
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbarRes">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="" asp-page="/Index">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/special">Specials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/menu" target="_blank">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/reservation">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/contact" target="_blank">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="icons">
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram fa-2x"></i></a>
+                        <a href="tel:6477803079"><i class="fa fa-phone-alt fa-2x"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!-- Footer -->
+
+    <section id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 p-0">
+                    <div class="footer-map">
+                        @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14420.632152683338!2d68.37327622757546!3d25.366019355293105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c704d3f7d2e23%3A0x3b24a6c23a1f1718!2sBoulevard%20Mall%20Hyderabad!5e0!3m2!1sen!2s!4v1589574187820!5m2!1sen!2s" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>*@
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.8826857794206!2d-79.27921388511801!3d43.69220225792689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce90c44b341b%3A0xdc6694e34f6dc8a5!2s5%20Leyton%20Ave%2C%20Scarborough%2C%20ON%20M1L%203T5!5e0!3m2!1sen!2sca!4v1625182226855!5m2!1sen!2sca" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-0">
+                    <div class="footerbg">
+                        <h2 class="text-center">Important Links</h2>
+                        <div class="footer-links">
+
+                            <li><a asp-area="" asp-page="/Index">Home</a></li>
+                            <li><a asp-area="" asp-page="/about">About</a></li>
+                            <li><a asp-area="" asp-page="/special">Special</a></li>
+                            <li><a asp-area="" asp-page="/menu" target="_blank">Menu</a></li>
+                            <li><a asp-area="" asp-page="/reservation">Reservation</a></li>
+                            <li><a asp-area="" asp-page="/contact" target="_blank">Contact</a></li>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 p-0">
+                    <div class="footertimig">
+                        <h2 class="text-center">Our Timings</h2>
+                        <div class="gootertiming text-center">
+                            <h5>Mon - Fri</h5>
+                            <p>8am to 10pm</p>
+                            <h5>Sat and Sun</h5>
+                            <p>8am to 12am</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2017 - 2021, afza restaurant - <a asp-area="" asp-page="/Index">Home</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/51bfc8bc19.js" crossorigin="anonymous"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

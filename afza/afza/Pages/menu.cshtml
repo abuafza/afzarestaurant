@@ -1,0 +1,270 @@
+﻿@page
+@model afza.Pages.menuModel
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<hr />
+<!-- fOOD sEARCH Section Starts Here -->
+<section class="food-search text-center"  style="margin-top:100px">
+    <div class="container">
+
+        <form action="" method="POST">
+            <input type="search" name="search" placeholder="Search for Food.." required>
+            <input type="submit" name="submit" value="Search" class="btn btn-primary">
+        </form>
+
+    </div>
+</section>
+<!-- fOOD sEARCH Section Ends Here -->
+
+<hr />
+<!-- Dain In Menu -->
+<section>
+    <div class="container-fluid my-3 p-0" style="background: url(img/bannerformenu1.jpg) no-repeat center center; border-radius:0.5em; background-attachment: fixed;">
+        <div class="overlay">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10 my-5">
+                        <div class="card-group">
+                            <div class="card mx-2 rounded text-center text-white" style="background-color: rgba(12,23,23, 0.5);">
+                                <div class="card-body">
+                                    <h1 class="card-title"><strong>Dine-In Menu</strong></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr />
+<!------------------- Menu ---------------------->
+<section>
+    <div class="container-fluid" style="margin-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <nav class="nav flex-column py-3" id="sidebar">
+                        <li class="nav-item" style="border-bottom: solid 1px #ccc;">
+                            <a href="#breakfast" class="nav-link pl-0 ml-0">Breakfast</a>
+                        </li>
+                        <li class="nav-item pl-0 ml-0" style="border-bottom: solid 1px #ccc;">
+                            <a href="#lunch" class="nav-link pl-0 ml-0">Lunch</a>
+                        </li>
+                        <li class="nav-item pl-0 ml-0">
+                            <a href="#dinner" class="nav-link pl-0 ml-0">Dinner</a>
+                        </li>
+                    </nav>
+                </div>
+
+                <div class="col-7">
+                    <div id="breakfast" class="viewheight">
+                        <div class="card margin-top">
+                            <div class="card-header">
+                                <h1 class="h1 card-title text-center text-uppercase">Breakfast</h1>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="card-group mb-4">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title"><span id="foodName">Beef Stack</span> <span class="badge badge-info badge-pill">$<span id="foodPrice">9</span></span></h4>
+                                                <h4><i class="fas fa-plus-circle text-success" onclick="addOrder()"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle" onclick="minus()" style="cursor: pointer;"></i>	<span class="font-weight-bold" id="beefStack">1</span> <i class="fas fa-plus-circle" onclick="plus()" style="cursor: pointer;"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title">Beef Stack</h4>
+                                                <h4><i class="fas fa-plus-circle text-success"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle"></i>	<span class="font-weight-bold">1</span> <i class="fas fa-plus-circle"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lunch" class="viewheight">
+                        <div class="card margin-top">
+                            <div class="card-header">
+                                <div class="h1 card-title text-center text-uppercase">Lunch</div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="card-group mb-4">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title">Beef Stack</h4>
+                                                <h4><i class="fas fa-plus-circle text-success"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle"></i>	<span class="font-weight-bold">1</span> <i class="fas fa-plus-circle"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title">Beef Stack</h4>
+                                                <h4><i class="fas fa-plus-circle text-success"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle"></i>	<span class="font-weight-bold">1</span> <i class="fas fa-plus-circle"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dinner" class="viewheight">
+                        <div class="card margin-top">
+                            <div class="card-header">
+                                <div class="h1 card-title text-center text-uppercase">Dinner</div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="card-group mb-4">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title">Beef Stack</h4>
+                                                <h4><i class="fas fa-plus-circle text-success"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle"></i>	<span class="font-weight-bold">1</span> <i class="fas fa-plus-circle"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <img src="img/beefstack.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="card-title">Beef Stack</h4>
+                                                <h4><i class="fas fa-plus-circle text-success"></i></h4>
+                                            </div>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        </div>
+
+                                        <div class="card-footer p-0">
+                                            <div class="d-flex justify-content-between px-3">
+                                                <p>Quantity</p>
+                                                <p><i class="fas fa-minus-circle"></i>	<span class="font-weight-bold">1</span> <i class="fas fa-plus-circle"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3" id="sidebar2">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title">My Order</h4>
+                                <p>(1 item)</p>
+                            </div>
+                        </div>
+
+                        <div class="card-body" id="orderList">
+
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <p>Subtotal</p>
+                                <p>$8</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-md btn-primary btn-block mt-3 border-radius-0">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<hr />
+<!-- For Contact send message -->
+<section>
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <p style="font-size:larger">
+                        For more information about <strong style="color:tomato">afza</strong>  Restaurant
+                        send a message <a asp-area="" asp-page="/contact">click here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

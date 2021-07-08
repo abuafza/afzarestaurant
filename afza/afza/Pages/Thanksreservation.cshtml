@@ -1,0 +1,24 @@
+﻿@page
+@model afza.Pages.ThanksreservationModel
+@{
+    ViewData["Title"] = "ThanksReservation";
+}
+<section id="showcase3">
+    <div class="box-showcase3">
+        <div class="content-showcase3">
+            <h3>Hi @Model.name!</h3>
+            <h3>Here is your booking information:</h3>
+            <div style="text-align:justify">
+                <p><b>Email: </b> @Model.email</p>
+                <p><b>Phone Number: </b>@Model.phone</p>
+                <p><b>Booking Table No:</b> @Model.tableno</p>
+                <p><b>Date of reservation: </b>@Model.date</p>
+                <p><b>Nuber of Guest:</b> @Model.guest</p>
+                <h3>Print your information</h3>
+                <a class="btn btn-primary" onclick="window.print()">Print</a>
+            </div>
+            <br />
+            <a class="btn btn-primary" asp-page="/Reservation">Book another Table</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,98 @@
+﻿@page
+@model afza.Pages.reservationModel
+@{
+    ViewData["Title"] = "Reservation";
+}
+
+<!-- RESERVATION -->
+<section>
+    <div class="reservation pt-5">
+        <h1 class="h1 text-center font-weight-bold text-uppercase mt-4">Reservation</h1>
+        <hr />
+        <div class="title-bottom"></div>
+        <div class="container-fluid">
+            <div class="row gutters">
+                <div class="col-6">
+                    <div class="card my-5" style="box-shadow: 0px 0px 2px 2px #ccc;">
+                        <div class="card-body">
+                            <img src="/img/reservation.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="card my-5" style="box-shadow: 0px 0px 2px 2px #ccc;">
+                        <h3 class="card-header text-center">Table Reservation</h3>
+                        <div class="card-body">
+                            <form action="" method="post">
+                                <div class="form-group row">
+                                    <label for="name2" class="col-3 col-form-label">Name</label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" asp-for="reservation.name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email2" class="col-3 col-form-label">Email</label>
+                                    <div class="col-9">
+                                        <input type="email" class="form-control" asp-for="reservation.email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="phone" class="col-3 col-form-label">Phone</label>
+                                    <div class="col-9">
+                                        <input type="tel" class="form-control" asp-for="reservation.phone" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="Tableno" class="col-3 col-form-lable">Table Number</label>
+                                    <div class="col-9">
+                                        <select class="form-control" asp-for="reservation.tableno">
+                                            <option>-- Select Your Table --</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="date" class="col-3 col-form-label">Date</label>
+                                    <div class="col-9">
+                                        <input type="date" class="form-control" asp-for="reservation.date" placeholder="Enter Your Location">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="guest" class="col-3 col-form-label">No of Guest</label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" asp-for="reservation.guest" placeholder="Number of Guest">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-10">
+                                        @*<button type="submit" class="btn btn-info">Book Your Table</button>*@
+                                        <p><input class="btn btn-info" type="submit" value="Book Your Table" /></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr />
+<!-- For Contact send message -->
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+                <p style="font-size:larger">
+                    For more information about <strong>AFZA</strong> Restaurant
+                    send a message <a asp-area="" asp-page="/contact">click here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

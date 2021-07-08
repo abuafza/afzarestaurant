@@ -1,0 +1,24 @@
+﻿@page
+@model afza.Pages.ThanksModel
+@{
+    ViewData["Title"] = "Thanks";
+}
+    <section id="showcase2"  style="margin-top:100px">
+        <div class="box-showcase2">
+            <div class="content-showcase2">
+                <h3>Welcome to our community @Model.name!</h3>
+                <h3>Here is you information:</h3>
+                <p><b>Name: </b>@Model.name</p>
+                <hr />
+                <p><b>Email: </b> @Model.email</p>
+                <hr />
+                <p><b>Phone Number: </b>@Model.phone</p>
+                <hr />
+                <p><b>Your Message:</b> @Model.message</p>
+                <h3>We will contact with you quickly.</h3>
+                <br />
+                <br />
+                <a class="btn btn-primary" asp-page="/Contact">Send another message</a>
+            </div>
+        </div>
+    </section>

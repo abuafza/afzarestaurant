@@ -1,0 +1,32 @@
+﻿@page
+@model afza.Pages.contactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!-- contact -->
+
+<section id="contact"  style="margin-top:100px">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12">
+                <div class="bgimg">
+                    <div class="contactform">
+                        <div class="contacthead">
+                            <h1>Contact Us</h1>
+                            <h3>We'd Love to help you. Ask us Anything...</h3>
+                        </div>
+                        <form action="" method="post">
+                            <input type="text" asp-for="contact.name" placeholder="Name..." required><br>
+                            <input type="email" asp-for="contact.email" placeholder="Your Email..." required><br>
+                            <input type="text" asp-for="contact.phone" placeholder="Mobile Number..." maxlength="12" required><br>
+                            <input type="text" asp-for="contact.message" placeholder="Your Message..." required style="height: 100px"><br>
+                            @*<button>Sumbit</button>*@
+                            <p><input class="btn btn-warning" type="submit" value="send" style="padding:5px"/></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
